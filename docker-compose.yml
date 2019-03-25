@@ -1,0 +1,19 @@
+version: '3'
+services:
+  gitlab:
+    image: hopher/gitlab-ce:latest
+    container_name: my_gitlab
+    build:
+      context: .
+      dockerfile: ./services/gitlab/Dockerfile
+    ports:      
+      - "8000:80"
+      - "8001:443"
+      - "8002:22"
+    volumes:
+      - ./services/gitlab/config:/etc/gitlab:Z
+      - ./services/gitlab/logs:/var/log/gitlab:Z
+      - ./services/gitlab/data:/var/opt/gitlab:Z     
+    restart: always  
+    stdin_open: true
+    tty: true
