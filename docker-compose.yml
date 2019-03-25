@@ -1,6 +1,8 @@
 version: '3'
 services:
   gitlab:
+    environment:
+      MIRROR_SOURCE: tencent  
     image: hopher/gitlab-ce:latest
     hostname: gitlab.example.com
     container_name: my_gitlab
