@@ -14,9 +14,9 @@ services:
       - "443:443"
       - "22:22"
     volumes:
-      - ./services/gitlab/config:/etc/gitlab:Z \
-      - ./services/gitlab/logs:/var/log/gitlab:Z \
-      - ./services/gitlab/data:/var/opt/gitlab:Z \      
+      - ./services/gitlab/config:/etc/gitlab \
+      - ./services/gitlab/logs:/var/log/gitlab \
+      - ./services/gitlab/data:/var/opt/gitlab \      
     restart: always
     stdin_open: true
     tty: true
