@@ -28,6 +28,9 @@ https://docs.docker.com/compose/install/
 docker-compose up
 ```  
 
+> **NOTE**
+> 过程比较久, 请耐心等待, 可用 `docker logs -f my_gitlab` 查看日志进度
+
 ## 数据存储说明
 
 **Where is the data stored?**
