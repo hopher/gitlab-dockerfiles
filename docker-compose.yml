@@ -14,9 +14,9 @@ services:
       - "8002:443"
       - "8003:22"
     volumes:
-      - ./services/gitlab/config:/etc/gitlab \
-      - ./services/gitlab/logs:/var/log/gitlab \
-      - ./services/gitlab/data:/var/opt/gitlab \      
+      - ./services/gitlab/config:/etc/gitlab
+      - ./services/gitlab/logs:/var/log/gitlab
+      - ./services/gitlab/data:/var/opt/gitlab      
     restart: always
     stdin_open: true
     tty: true
