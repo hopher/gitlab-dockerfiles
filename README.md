@@ -1,4 +1,4 @@
-# debian-dockerfiles
+# gitlab-dockerfiles
 
 用 Docker 容器服务的方式搭建 `gitlab` 环境, 易于维护、升级。
 
