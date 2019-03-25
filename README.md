@@ -8,6 +8,17 @@
 > `cat /etc/issue`
 
 
+## 工具安装
+
+### Get Docker CE for Debian
+
+https://docs.docker.com/install/linux/docker-ce/debian/#prerequisites
+
+### 安装 docker-compose
+
+https://docs.docker.com/compose/install/
+
+
 ## 使用
 
 进入 docker-compose.yml 所在目录
@@ -39,3 +50,4 @@ You can fine tune these directories to meet your requirements.
 - [[镜像站] 阿里云开源镜像站](https://opsx.alibaba.com/mirror)
 - [[镜像站] 腾讯开源镜像站](https://mirrors.cloud.tencent.com/index.html)
 - [[ubuntu] 腾讯开源镜像站](https://mirrors.cloud.tencent.com/help/ubuntu.html)
+- [Get Docker CE for Debian](https://docs.docker.com/install/linux/docker-ce/debian/#prerequisites)
