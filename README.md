@@ -1,6 +1,11 @@
 # debian-dockerfiles
 
+用 Docker 容器服务的方式搭建 `gitlab` 环境, 易于维护、升级。
 
+本环境基于 `gitlab/gitlab-ce:latest`, Linux版本: `Ubuntu 16.04.6 LTS`
+
+> **NOTE**:  
+> `cat /etc/issue`
 
 ## Where is the data stored?
 
@@ -19,3 +24,5 @@ You can fine tune these directories to meet your requirements.
 
 - [GitLab Installation](https://www.gitlab.com.cn/installation/#debian)
 - [GitLab Docker 相关参数](https://docs.gitlab.com/omnibus/docker/)
+- [[镜像站] 阿里云开源镜像站](https://opsx.alibaba.com/mirror)
+- [[镜像站] 腾讯开源镜像站](https://mirrors.cloud.tencent.com/index.html)
