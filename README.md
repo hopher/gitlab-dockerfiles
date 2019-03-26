@@ -64,6 +64,55 @@ docker restart my_gitlab
 ```
 
 
+## ssh方式, gitlab使用的不是标准22端口解决方法
+
+> 参考：https://blog.csdn.net/wanwan5856/article/details/52797969
+
+设置步骤：
+
+1，本地进入.ssh查看是否存在密钥对：`xxx`和 `xxx.pub`
+
+命令：`cd ~/.ssh`
+
+2，如果不存在，使用ssh-keygen来创建
+
+命令：ssh-keygen -t rsa -C "youremail@youremail.com"
+
+> 注解：  
+> Enter file in which to save the key 输入保存秘钥的文件 直接enter即可  
+> Enter passphrase (empty for no passphrase) 输入密码 直接enter即可  
+> 此时查看.ssh目录下可看到新增的一对秘钥id_rsa和id_rsa.pub
+
+3，查看公钥
+
+命令： `cat ~/.ssh/id_rsa.pub `
+
+复制全部，包括后面的邮箱
+
+4，添加到gitlab中
+
+左侧栏Profile Settings → 左侧栏SSH Keys → 粘贴并Add key
+
+5，创建config，端口为22可忽略这一步
+
+命令：`cat>~/.ssh/config`
+
+输入：
+
+```
+Host git.xxx.com
+User git
+Port 8003
+IdentityFile /Users/hopher/.ssh/id_rsa
+```
+> IdentityFile（替换成你的id_rsa所在的路径）
+
+6，验证是否设置成功
+
+命令：`ssh -T git@git.xxx.com`
+
+显示Welcome to GitLab, yourname! 代表成功
+
 ## 参考资料
 
 - [GitLab Installation](https://www.gitlab.com.cn/installation/#debian)
