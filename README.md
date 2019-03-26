@@ -46,6 +46,24 @@ The GitLab container uses host mounted volumes to store persistent data:
 You can fine tune these directories to meet your requirements.
 
 
+## 安装后，需要更新域名
+
+> **参考文档**:
+> https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab
+
+编辑 `/etc/gitlab/gitlab.rb`
+
+```
+docker exec -it my_gitlab vi /etc/gitlab/gitlab.rb
+```
+
+修改 `external_url` 对应的值，然后，重启容器
+
+```
+docker restart my_gitlab
+```
+
+
 ## 参考资料
 
 - [GitLab Installation](https://www.gitlab.com.cn/installation/#debian)
