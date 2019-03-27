@@ -107,6 +107,9 @@ IdentityFile /Users/hopher/.ssh/id_rsa
 ```
 > IdentityFile（替换成你的id_rsa所在的路径）
 
+> **Windows 示例**:
+> IdentityFile /c/Users/Administrator/.ssh/id_rsa
+
 6，验证是否设置成功
 
 命令：`ssh -T git@git.xxx.com`
