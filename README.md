@@ -103,9 +103,8 @@ docker restart my_gitlab
 Host git.xxx.com
 User git
 Port 8003
-IdentityFile /Users/hopher/.ssh/id_rsa
+IdentityFile /Users/hopher/.ssh/id_rsa（替换成你的id_rsa所在的路径）
 ```
-> IdentityFile（替换成你的id_rsa所在的路径）
 
 > **Windows 示例**:  
 > IdentityFile /c/Users/Administrator/.ssh/id_rsa
